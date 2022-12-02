@@ -1,0 +1,149 @@
+@import '../../variables.scss';
+
+.default {
+    overflow-x: hidden;
+    background: $main-bg;
+}
+
+.sidebar {
+    background-color: $white;
+    float: left;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1em 0;
+    transition: 0.3s ease-in-out;
+
+    a {
+        color: black;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: .8rem 1rem;
+        text-transform: capitalize;
+        text-decoration: none;
+        margin: 0.3rem 0;
+        transition: .4s ease-in-out;
+
+        &:hover {
+            color: $white;
+            background: $gray;
+        }
+    }
+
+    .nuxt-link-exact-active {
+        background: $second;
+        color: $white;
+    }
+
+    .b-icon {
+        font-size: 24px;
+        vertical-align: -.08em;
+    }
+}
+
+
+
+.sidebar-right {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .header {
+        background: $second;
+
+        .navbar-minimize {
+            color: $white;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            transition: .4s;
+
+            &:hover {
+                color: $primary;
+                background: $white;
+            }
+        }
+
+        .right-menu {
+            position: relative;
+
+            .b-icon {
+                font-size: larger;
+                font-weight: bold;
+                vertical-align: -.8em;
+                color: $white;
+            }
+
+            .notification {
+                position: relative;
+
+                .badge {
+                    position: absolute;
+                    top: .5rem;
+                    left: .5rem;
+
+                }
+
+            }
+
+            .profile {
+                img {
+                    width: 3rem;
+                }
+            }
+
+            .user-profile {
+
+                position: relative;
+                right: 0;
+                top: 0;
+
+            }
+        }
+    }
+
+    footer {
+        background: $white;
+        width: 100%;
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.modal {
+
+
+    .modal-dialog {
+        width: 20rem;
+        margin: 4rem 2.5rem auto auto;
+
+        .modal-content {
+            .card {
+                &-img-top {
+                    width: 4rem;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 568px) {
+
+    .sidebar-right {
+        .header {
+            .right-menu {
+                .profile {
+                    img {
+                        width: 2rem;
+                        margin-top: .5rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

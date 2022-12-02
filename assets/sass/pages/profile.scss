@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+
+.profile-container {
+    .profile {
+        .card {
+
+            // flex-direction: row;
+            &-img-top {
+                width: 7.5rem;
+                height: 7.5rem;
+                border-radius: 50%;
+                margin: .5rem auto;
+                border: 1px solid $second;
+            }
+
+            &-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .card {
+        &-title {
+            color: $primary;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .profile-container {
+        padding: 1rem;
+    }
+}

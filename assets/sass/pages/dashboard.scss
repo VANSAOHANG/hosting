@@ -1,0 +1,68 @@
+@import '../../variables.scss';
+
+.dashboard {
+    .leaves {
+        .card {
+            &-title {
+                color: $primary;
+
+                // span {
+                //     font-size: 1.25rem;
+                // }
+            }
+        }
+
+        .leave {
+            &:not(:first-child){
+                border-left: 1px solid #dee2e6;
+            }
+
+            .title {
+                font-size: large;
+                color: $gray;
+            }
+        }
+    }
+
+    .ot-control {
+        .card {
+            background: $primary;
+            transition: .4s ease-in-out;
+            color: $white;
+
+            &-title {
+                color: $white;
+            }
+
+            &-text {
+                font-size: larger;
+                margin-left: 1rem;
+            }
+
+            &:hover {
+                background: $second;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .leaves {
+        .leave {
+            &:nth-child(3) {
+                border:0px solid !important
+            }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .leaves {
+        .leave {
+            &:not(:first-child) {
+                border:0px solid !important
+            }
+        }
+    }
+}
+

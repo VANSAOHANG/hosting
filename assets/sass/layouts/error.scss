@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.s-error {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: $main-bg;
+
+    .error-container {
+        width: 50vw;
+        height: 50vh;
+        background: $white;
+
+        .notFound {
+            font-weight: bold;
+            font-size: 4rem;
+        }
+    }
+
+}
